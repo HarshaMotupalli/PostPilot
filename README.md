@@ -47,6 +47,9 @@ This makes PostPilot ideal for small-scale use, prototyping, or learning purpose
 
 **⚠️ Note:** This project is frontend-only and does not connect to real social media APIs or use a backend.
 
+![Dashboard Screenshot](pp_images/home_page.png)
+
+
 ## 📌 Future Scope
 
 * Integration with social media APIs for real-time post publishing
