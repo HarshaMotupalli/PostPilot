@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - PostPilot</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/home.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="background-animation">
+        <canvas id="particle-canvas"></canvas>
+    </div>
+
+    <!-- Header Frame (Fixed) -->
+    <header class="header-frame">
+        <div class="container mx-auto flex justify-between items-center py-4">
+            <h1 class="text-2xl font-bold text-white">PostPilot</h1>
+            <nav class="flex space-x-8">
+                <div class="relative">
+                    <button class="nav-link" id="tools-btn">Tools</button>
+                    <div class="dropdown hidden" id="tools-dropdown">
+                        <a href="schedule.html" class="dropdown-item">Schedule</a>
+                        <a href="analysis.html" class="dropdown-item">Analysis</a>
+                        <a href="content.html" class="dropdown-item">Content</a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <button class="nav-link" id="platforms-btn">Platforms</button>
+                    <div class="dropdown hidden" id="platforms-dropdown">
+                        <a href="https://facebook.com" target="_blank" class="dropdown-item">Facebook</a>
+                        <a href="https://instagram.com" target="_blank" class="dropdown-item">Instagram</a>
+                        <a href="https://linkedin.com" target="_blank" class="dropdown-item">LinkedIn</a>
+                        <a href="https://twitter.com" target="_blank" class="dropdown-item">Twitter (X)</a>
+                    </div>
+                </div>
+                <a href="about.html" class="nav-link">About</a>
+            </nav>
+            <div id="auth-section" class="space-x-4"></div>
+        </div>
+    </header>
+
+    <!-- Main Content Frame (Scrollable) -->
+    <main class="main-frame">
+        <div class="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="content-container">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-6 text-center">About PostPilot</h2>
+                <div class="icon-text">
+                    <i class="fas fa-rocket"></i>
+                    <p class="text-gray-600">
+                        PostPilot simplifies messaging with SMS scheduling. 
+                        Send texts to anyone, anytime, with ease. 
+                        Perfect for reminders, updates, or personal outreach.
+                    </p>
+                </div>
+                <div class="icon-text">
+                    <i class="fas fa-mobile-alt"></i>
+                    <p class="text-gray-600">
+                        We make communication smart and direct. 
+                        Schedule SMS from one dashboard. 
+                        Ideal for individuals or small teams.
+                    </p>
+                </div>
+                <div class="icon-text">
+                    <i class="fas fa-user-check"></i>
+                    <p class="text-gray-600">
+                        PostPilot is user-friendly for all. 
+                        Enjoy auto-scheduling and a clean interface. 
+                        Stay connected with less hassle.
+                    </p>
+                </div>
+                <div class="icon-text">
+                    <i class="fas fa-eye"></i>
+                    <p class="text-gray-600 mb-6">
+                        We’re shaping the future of messaging. 
+                        Look forward to AI tools and more features. 
+                        Join us to streamline your SMS game!
+                    </p>
+                </div>
+                <div class="text-center">
+                    <a href="contact.html" class="text-blue-600 hover:underline">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-frame">
+        <div class="container mx-auto py-6 text-center text-gray-300">
+            <p>© 2025 PostPilot. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/background.js"></script>
+    <script src="../js/about.js"></script>
+</body>
+</html>

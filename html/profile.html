@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - PostPilot</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/home.css">
+</head>
+<body>
+    <div class="background-animation">
+        <canvas id="particle-canvas"></canvas>
+    </div>
+
+    <header class="header-frame">
+        <div class="container mx-auto flex justify-between items-center py-4">
+            <h1 class="text-2xl font-bold text-white">PostPilot</h1>
+            <nav class="flex space-x-8">
+                <div class="relative">
+                    <button class="nav-link" id="tools-btn">Tools</button>
+                    <div class="dropdown hidden" id="tools-dropdown">
+                        <a href="schedule.html" class="dropdown-item">Schedule</a>
+                        <a href="analysis.html" class="dropdown-item">Analysis</a>
+                        <a href="content.html" class="dropdown-item">Content</a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <button class="nav-link" id="platforms-btn">Platforms</button>
+                    <div class="dropdown hidden" id="platforms-dropdown">
+                        <a href="https://facebook.com" target="_blank" class="dropdown-item">Facebook</a>
+                        <a href="https://instagram.com" target="_blank" class="dropdown-item">Instagram</a>
+                        <a href="https://linkedin.com" target="_blank" class="dropdown-item">LinkedIn</a>
+                        <a href="https://twitter.com" target="_blank" class="dropdown-item">Twitter (X)</a>
+                    </div>
+                </div>
+                <a href="about.html" class="nav-link">About</a>
+            </nav>
+            <div id="auth-section" class="space-x-4"></div>
+        </div>
+    </header>
+
+    <main class="main-frame">
+        <div class="container mx-auto py-12">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-4 animate-fade-in">Your Profile</h2>
+            <p class="text-lg text-gray-600 text-center mb-12 animate-fade-in delay-100">View and manage your PostPilot account details below.</p>
+
+            <div class="feature-card max-w-2xl mx-auto animate-fade-in">
+                <div class="flex items-center justify-between mb-6">
+                    <div class="flex items-center">
+                        <div class="profile-icon text-2xl mr-4" id="profile-icon"></div>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-blue-600" id="profile-username"></h3>
+                            <p class="text-gray-500 text-sm">Active User</p>
+                        </div>
+                    </div>
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition">Edit Profile</button>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                    <div>
+                        <p class="text-gray-600 mb-2"><strong>Email:</strong> <span id="profile-email"></span></p>
+                        <p class="text-gray-600 mb-2"><strong>Joined:</strong> <span id="profile-joined"></span></p>
+                    </div>
+                    <div>
+                        <p class="text-gray-600 mb-2"><strong>Account Type:</strong> Free Tier</p>
+                        <p class="text-gray-600 mb-2"><strong>Last Login:</strong> ${new Date().toLocaleString()}</p>
+                    </div>
+                </div>
+                <p class="text-gray-500 text-sm mb-6">Welcome to your PostPilot profile! This is where you can see all your account details at a glance. Use the "Edit Profile" button to update your information, change your password, or customize your experience. Stay tuned for more features like profile pictures and social media integrations.</p>
+                <div class="text-center">
+                    <a href="dashboard.html" class="text-blue-600 hover:underline mr-4">Back to Dashboard</a>
+                    <a href="contact.html" class="text-blue-600 hover:underline">Contact Support</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-frame">
+        <div class="container mx-auto py-6 text-center text-gray-300">
+            <p>© 2025 PostPilot. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/background.js"></script>
+    <script src="../js/profile.js"></script>
+</body>
+</html>

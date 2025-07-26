@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - PostPilot</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/home.css">
+</head>
+<body>
+    <div class="background-animation">
+        <canvas id="particle-canvas"></canvas>
+    </div>
+
+    <header class="header-frame">
+        <div class="container mx-auto flex justify-between items-center py-4">
+            <h1 class="text-2xl font-bold text-white">PostPilot</h1>
+            <nav class="flex space-x-8">
+                <div class="relative">
+                    <button class="nav-link" id="tools-btn">Tools</button>
+                    <div class="dropdown hidden" id="tools-dropdown">
+                        <a href="schedule.html" class="dropdown-item">Schedule</a>
+                        <a href="analysis.html" class="dropdown-item">Analysis</a>
+                        <a href="content.html" class="dropdown-item">Content</a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <button class="nav-link" id="platforms-btn">Platforms</button>
+                    <div class="dropdown hidden" id="platforms-dropdown">
+                        <a href="https://facebook.com" target="_blank" class="dropdown-item">Facebook</a>
+                        <a href="https://instagram.com" target="_blank" class="dropdown-item">Instagram</a>
+                        <a href="https://linkedin.com" target="_blank" class="dropdown-item">LinkedIn</a>
+                        <a href="https://twitter.com" target="_blank" class="dropdown-item">Twitter (X)</a>
+                    </div>
+                </div>
+                <a href="#" class="nav-link">About</a>
+            </nav>
+            <div id="auth-section" class="space-x-4"></div>
+        </div>
+    </header>
+
+    <main class="main-frame">
+        <div class="container mx-auto py-12">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-4 animate-fade-in">Your PostPilot Dashboard</h2>
+            <p class="text-lg text-gray-600 text-center mb-12 animate-fade-in delay-100">Welcome to your command center! Here, you can seamlessly manage your social media presence across multiple platforms, schedule posts, analyze performance, and create engaging content—all from one intuitive interface.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <div class="feature-card animate-fade-in">
+                    <h3 class="text-xl font-semibold mb-2 text-blue-600">Schedule Posts</h3>
+                    <p class="text-gray-600">Plan your content calendar with precision. Schedule posts for Facebook, Instagram, LinkedIn, and Twitter (X) to go live at optimal times for your audience. Automate your workflow and ensure consistency without the hassle.</p>
+                    <a href="schedule.html" class="text-blue-600 hover:underline mt-2 inline-block">Go to Scheduler</a>
+                </div>
+                <div class="feature-card animate-fade-in delay-100">
+                    <h3 class="text-xl font-semibold mb-2 text-blue-600">Analyze Performance</h3>
+                    <p class="text-gray-600">Dive into detailed analytics to understand what works. Track likes, shares, comments, and follower growth in real-time. Use these insights to refine your strategy and boost engagement across all platforms.</p>
+                    <a href="#" class="text-blue-600 hover:underline mt-2 inline-block">View Analytics</a>
+                </div>
+                <div class="feature-card animate-fade-in delay-200">
+                    <h3 class="text-xl font-semibold mb-2 text-blue-600">Create Content</h3>
+                    <p class="text-gray-600">Craft stunning posts with our built-in editor. Choose from customizable templates, add visuals, and tailor your content to each platform’s unique audience—all without leaving PostPilot.</p>
+                    <a href="#" class="text-blue-600 hover:underline mt-2 inline-block">Start Creating</a>
+                </div>
+            </div>
+
+            <div class="text-center mb-12">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4 animate-fade-in">Why PostPilot?</h3>
+                <p class="text-gray-600 max-w-2xl mx-auto mb-4 animate-fade-in delay-100">PostPilot empowers you to take control of your social media strategy. Whether you’re a solo creator, a small business, or a marketing team, our tools save you time and amplify your reach. From scheduling posts weeks in advance to analyzing performance trends, everything you need is right here.</p>
+                <p class="text-sm text-gray-500 mb-4 animate-fade-in delay-200">Stay ahead of the game with real-time updates and actionable insights. Collaborate with your team, manage multiple accounts, and maintain a consistent brand voice—all from this dashboard.</p>
+            </div>
+
+            <div class="text-center">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4 animate-fade-in">Get Started Today</h3>
+                <p class="text-gray-600 max-w-2xl mx-auto mb-6 animate-fade-in delay-100">Explore the full power of PostPilot by diving into the tools above. Need help? Our support team is just a click away.</p>
+                <button class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition">Explore Features</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-frame">
+        <div class="container mx-auto py-6 text-center text-gray-300">
+            <p>© 2025 PostPilot. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/background.js"></script>
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>

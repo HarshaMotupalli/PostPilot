@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - PostPilot</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/auth.css">
+</head>
+<body>
+    <div class="background-animation">
+        <canvas id="particle-canvas"></canvas>
+    </div>
+
+    <header class="header-frame">
+        <div class="container mx-auto flex justify-between items-center py-4">
+            <h1 class="text-2xl font-bold text-white">PostPilot</h1>
+            <nav class="flex space-x-8">
+                <div class="relative">
+                    <button class="nav-link" id="tools-btn">Tools</button>
+                    <div class="dropdown hidden" id="tools-dropdown">
+                        <a href="signin.html" class="dropdown-item">Schedule</a>
+                        <a href="signin.html" class="dropdown-item">Analysis</a>
+                        <a href="signin.html" class="dropdown-item">Content</a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <button class="nav-link" id="platforms-btn">Platforms</button>
+                    <div class="dropdown hidden" id="platforms-dropdown">
+                        <a href="https://facebook.com" target="_blank" class="dropdown-item">Facebook</a>
+                        <a href="https://instagram.com" target="_blank" class="dropdown-item">Instagram</a>
+                        <a href="https://linkedin.com" target="_blank" class="dropdown-item">LinkedIn</a>
+                        <a href="https://twitter.com" target="_blank" class="dropdown-item">Twitter (X)</a>
+                    </div>
+                </div>
+                <a href="about.html" class="nav-link">About</a>
+            </nav>
+            <div class="space-x-4">
+                <a href="signin.html" class="auth-btn">Sign In</a>
+                <a href="signup.html" class="auth-btn">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-frame">
+        <div class="container mx-auto py-12">
+            <div class="form-container">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-6 text-center">Sign Up</h2>
+                <form id="signup-form">
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="username">Username</label>
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700" id="username" type="text" placeholder="Username" required>
+                        <p class="error-message hidden" id="username-error">Username too short.</p>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700" id="email" type="email" placeholder="Email" required>
+                        <p class="error-message hidden" id="email-error">Invalid email.</p>
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="password">Password</label>
+                        <div class="password-wrapper">
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700" id="password" type="password" placeholder="Password" required>
+                            <i class="password-toggle fas fa-eye" id="toggle-password"></i>
+                        </div>
+                        <p class="error-message hidden" id="password-error">Password too short.</p>
+                    </div>
+                    <div class="text-center">
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition" type="submit">Sign Up</button>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-sm text-gray-600">Already have an account? <a href="signin.html" class="text-blue-600 hover:underline">Sign In</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/background.js"></script>
+    <script src="../js/signup.js"></script>
+</body>
+</html>

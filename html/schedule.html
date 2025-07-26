@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Posts - PostPilot</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/home.css">
+</head>
+<body>
+    <div class="background-animation">
+        <canvas id="particle-canvas"></canvas>
+    </div>
+
+    <header class="header-frame">
+        <div class="container mx-auto flex justify-between items-center py-4">
+            <h1 class="text-2xl font-bold text-white">PostPilot</h1>
+            <nav class="flex space-x-8">
+                <div class="relative">
+                    <button class="nav-link" id="tools-btn">Tools</button>
+                    <div class="dropdown hidden" id="tools-dropdown">
+                        <a href="schedule.html" class="dropdown-item">Schedule</a>
+                        <a href="analysis.html" class="dropdown-item">Analysis</a>
+                        <a href="content.html" class="dropdown-item">Content</a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <button class="nav-link" id="platforms-btn">Platforms</button>
+                    <div class="dropdown hidden" id="platforms-dropdown">
+                        <a href="https://facebook.com" target="_blank" class="dropdown-item">Facebook</a>
+                        <a href="https://instagram.com" target="_blank" class="dropdown-item">Instagram</a>
+                        <a href="https://linkedin.com" target="_blank" class="dropdown-item">LinkedIn</a>
+                        <a href="https://twitter.com" target="_blank" class="dropdown-item">Twitter (X)</a>
+                    </div>
+                </div>
+                <a href="about.html" class="nav-link">About</a>
+            </nav>
+            <div id="auth-section" class="space-x-4"></div>
+        </div>
+    </header>
+
+    <main class="main-frame">
+        <div class="container mx-auto py-12">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-4 animate-fade-in">Schedule Your Posts</h2>
+            <p class="text-lg text-gray-600 text-center mb-12 animate-fade-in delay-100">Plan and automate your social media content across multiple platforms with ease.</p>
+
+            <div class="feature-card max-w-2xl mx-auto animate-fade-in mb-12">
+                <h3 class="text-2xl font-semibold text-blue-600 mb-4">Create a New Post</h3>
+                <form id="schedule-form">
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="post-content">Post Content</label>
+                        <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700" id="post-content" rows="4" placeholder="Write your post here..." required></textarea>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2">Platforms</label>
+                        <div class="flex flex-wrap gap-4">
+                            <label><input type="checkbox" name="platform" value="Facebook"> Facebook</label>
+                            <label><input type="checkbox" name="platform" value="Instagram"> Instagram</label>
+                            <label><input type="checkbox" name="platform" value="LinkedIn"> LinkedIn</label>
+                            <label><input type="checkbox" name="platform" value="Twitter"> Twitter (X)</label>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="schedule-datetime">Schedule Date & Time</label>
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700" id="schedule-datetime" type="datetime-local" required>
+                    </div>
+                    <div class="text-center">
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition" type="submit">Schedule Post</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="feature-card max-w-2xl mx-auto animate-fade-in">
+                <h3 class="text-2xl font-semibold text-blue-600 mb-4">Scheduled Posts</h3>
+                <div id="scheduled-posts" class="text-gray-600"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-frame">
+        <div class="container mx-auto py-6 text-center text-gray-300">
+            <p>© 2025 PostPilot. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/background.js"></script>
+    <script src="../js/schedule.js"></script>
+</body>
+</html>
